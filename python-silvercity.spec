@@ -7,6 +7,7 @@ Group:          Development/Python
 License:        BSD-like
 URL:            http://silvercity.sourceforge.net/
 Source0:        http://garr.dl.sourceforge.net/sourceforge/silvercity/%{shortname}-%{version}.tar.gz
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires:  python-devel
 
