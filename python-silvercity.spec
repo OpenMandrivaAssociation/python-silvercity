@@ -1,7 +1,7 @@
 %define shortname SilverCity
 Name:           python-silvercity
 Version:        0.9.7
-Release:        %mkrel 7
+Release:        %mkrel 8
 Summary:        Lexing package, based on Scintilla
 Group:          Development/Python
 License:        BSD-like
@@ -21,13 +21,16 @@ Scripting language bindings currently exist for Python.
 %setup -q -n %{shortname}-%{version}
 sed -i "s,/usr/home/sweetapp/bin/python,/usr/bin/env python," PySilverCity/Scripts/cgi-styler-form.py
 
+# fix .css permissions
+chmod 644 CSS/default.css
+
 %build
 %{__python} setup.py build
 
 %install
 rm -rf %{buildroot}
 %{__python} setup.py install -O1 --skip-build --root %{buildroot} --install-purelib=%py_platsitedir
- 
+
 %clean
 rm -rf %{buildroot}
 
@@ -36,4 +39,5 @@ rm -rf %{buildroot}
 %{_bindir}/cgi-styler-form.py
 %{_bindir}/cgi-styler.py
 %{_bindir}/source2html.py
+%attr(644,root,root) %{py_platsitedir}/%{shortname}/default.css
 %{py_platsitedir}/*
