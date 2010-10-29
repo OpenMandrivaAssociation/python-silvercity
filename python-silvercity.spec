@@ -1,7 +1,7 @@
 %define shortname SilverCity
 Name:           python-silvercity
 Version:        0.9.7
-Release:        %mkrel 8
+Release:        %mkrel 9
 Summary:        Lexing package, based on Scintilla
 Group:          Development/Python
 License:        BSD-like
