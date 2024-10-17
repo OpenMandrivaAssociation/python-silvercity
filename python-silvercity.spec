@@ -5,7 +5,7 @@ Release:        12
 Summary:        Lexing package, based on Scintilla
 Group:          Development/Python
 License:        BSD-like
-URL:            http://silvercity.sourceforge.net/
+URL:            https://silvercity.sourceforge.net/
 Source0:        http://garr.dl.sourceforge.net/sourceforge/silvercity/%{shortname}-%{version}.tar.gz
 BuildRequires:  python-devel
 
